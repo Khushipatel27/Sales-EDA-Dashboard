@@ -1,5 +1,6 @@
 <div align="center">
 
+# 📊 Comprehensive Sales EDA Dashboard
 <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/Streamlit-1.32-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
 <img src="https://img.shields.io/badge/PySpark-3.5.0-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white"/>
@@ -9,15 +10,12 @@
 
 <br/><br/>
 
-# 📊 Comprehensive Sales EDA Dashboard
 
 ### An end-to-end sales analytics platform built with Streamlit, PySpark, and scikit-learn
 
-**[🚀 Live Demo](#)** · **[📓 Notebook](notebooks/01_sales_eda.ipynb)** · **[🐛 Report Bug](https://github.com/Khushipatel27/sales-eda-dashboard/issues)**
 
 <br/>
 
-> Developed by **[Khushi Patel](https://github.com/Khushipatel27)**
 
 </div>
 
