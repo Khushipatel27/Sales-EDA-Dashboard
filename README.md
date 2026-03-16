@@ -178,17 +178,6 @@ The notebook covers all 5 analytical layers and saves charts to `outputs/figures
 
 ---
 
-## 👩‍💻 Author
-
-<div align="center">
-
-**Khushi Patel**
-
-[![GitHub](https://img.shields.io/badge/GitHub-Khushipatel27-181717?style=flat-square&logo=github)](https://github.com/Khushipatel27)
-
-*Built for Summer 2026 internship applications — Data Analyst · Data Engineer · Data Scientist*
-
-</div>
 
 ---
 
