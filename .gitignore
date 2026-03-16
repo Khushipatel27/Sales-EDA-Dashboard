@@ -35,3 +35,6 @@ Thumbs.db
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Private project intelligence (local only — never push)
+.internal/
