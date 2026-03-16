@@ -1,124 +1,199 @@
+<div align="center">
+
+<img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/Streamlit-1.32-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+<img src="https://img.shields.io/badge/PySpark-3.5.0-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white"/>
+<img src="https://img.shields.io/badge/scikit--learn-1.4.2-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
+<img src="https://img.shields.io/badge/Plotly-5.20-3F4F75?style=for-the-badge&logo=plotly&logoColor=white"/>
+<img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge"/>
+
+<br/><br/>
+
 # 📊 Comprehensive Sales EDA Dashboard
 
-An interactive Streamlit dashboard for performing **exploratory data analysis** on sales data using the Superstore dataset. Gain actionable insights through detailed statistical summaries, visualizations, and key business metrics.
+### An end-to-end sales analytics platform built with Streamlit, PySpark, and scikit-learn
 
-## 🌟 Features
+**[🚀 Live Demo](#)** · **[📓 Notebook](notebooks/01_sales_eda.ipynb)** · **[🐛 Report Bug](https://github.com/Khushipatel27/sales-eda-dashboard/issues)**
 
-### 📋 Dataset Overview
-- Full dataset information and statistical summary
-- Preview and explore sample data with dark-themed tables
-- Identify missing values, duplicates, and basic data integrity checks
-- Key metric summaries (Total Sales, Total Profit, Average Profit Margin, etc.)
+<br/>
 
-### 📊 Yearly and Category Analysis
-- Year-over-year sales and profit comparisons
-- Monthly and quarterly trend visualizations
-- Product category and sub-category performance insights
-- Regional and segment-wise analysis
+> Developed by **[Khushi Patel](https://github.com/Khushipatel27)**
 
-### 🔍 Advanced Analytics
-- Correlation and distribution analysis
-- Customer segmentation insights
-- Quantity vs. Profit vs. Discount visualizations
-- Heatmaps for metric relationships
-- Seasonal and trend pattern identification
+</div>
+
+---
+
+## ✨ Overview
+
+A **portfolio-grade** sales analytics project that transforms raw Superstore transaction data into actionable business intelligence through:
+
+- 🔥 **5-page interactive Streamlit dashboard** with dark-themed UI
+- ⚡ **PySpark aggregations** (GROUP BY + window functions) with pandas fallback
+- 🤖 **Polynomial Regression** model (R² = 0.72) for profit prediction
+- 💡 **Business KPIs** — revenue, margin, discount breakeven, RFM segmentation
+- 📓 **Jupyter notebook** with 5 analytical layers
+
+---
+
+## 📸 Dashboard Preview
+
+| Page | Description |
+|------|-------------|
+| 📋 **Executive Summary** | 6 KPI cards · YoY trend · Top products · Key findings |
+| 📦 **Category & Regional** | Category breakdown · Sub-category margins · Regional performance |
+| 💸 **Discount Impact** | Scatter analysis · Band breakdown · Correlation heatmap · RFM-lite |
+| ⚡ **PySpark Results** | Aggregation tables · Running total chart · Code viewer |
+| 🤖 **Predictive Model** | Polynomial regression · Feature coefficients · Interactive predictor |
+
+---
+
+## 📊 Key Findings
+
+> Computed from 9,994 Superstore orders (Jan 2014 – Dec 2017)
+
+| Metric | Result |
+|--------|--------|
+| 💰 **Total Revenue** | **$2,297,201** |
+| 📈 **Total Profit** | **$286,397** |
+| 🎯 **Overall Profit Margin** | **12.5%** |
+| 🛒 **Total Orders** | 5,009 |
+| 👥 **Unique Customers** | 793 |
+| ⚠️ **Discount Breakeven** | Profit turns negative at **≥ 30% discount** |
+| 📉 **Loss-Making Sub-Categories** | Tables (−8.6%), Bookcases (−3.0%), Supplies (−2.5%) |
+| 🏆 **Most Profitable Sub-Categories** | Labels (44.4%), Paper (43.4%), Envelopes (42.3%) |
+| 🌍 **Best Region** | **West** — 14.9% profit margin |
+| 💳 **Best Segment by AOV** | **Home Office** — $472.67 avg order value |
+| 🤖 **Model R²** | **0.72** (Polynomial degree-2 regression) |
+
+---
+
+## 🏗️ Project Structure
+
+```
+📁 sales-eda-dashboard/
+│
+├── 📁 src/
+│   ├── data_loader.py       # Load, validate & enrich data
+│   ├── eda_analysis.py      # KPIs, trends, regression, RFM
+│   ├── spark_analysis.py    # PySpark GROUP BY + window functions
+│   └── utils.py             # Colour maps, formatters, PySpark code
+│
+├── 📁 data/
+│   └── Dataset_Superstore.csv
+│
+├── 📁 notebooks/
+│   └── 01_sales_eda.ipynb   # Full 5-layer EDA walkthrough
+│
+├── 📁 outputs/
+│   └── figures/             # Chart exports
+│
+├── 📁 .streamlit/
+│   └── config.toml          # Pinned dark theme
+│
+├── app.py                   # ← Streamlit entry point
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚡ Tech Stack
+
+| Layer | Tools |
+|-------|-------|
+| **Dashboard** | Streamlit 1.32 |
+| **Data Engineering** | PySpark 3.5 · pandas 2.2 · numpy |
+| **Visualisation** | Plotly Express / Graph Objects · matplotlib · seaborn |
+| **Machine Learning** | scikit-learn — PolynomialFeatures · LinearRegression |
+| **Notebook** | Jupyter · ipykernel |
+
+---
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### 1 · Clone
 
 ```bash
-pip install streamlit pandas matplotlib seaborn plotly
+git clone https://github.com/Khushipatel27/sales-eda-dashboard.git
+cd sales-eda-dashboard
 ```
 
-## Installation
+### 2 · Create environment
 
-1. Clone the repository
-   ```
-   git clone https://github.com/Khushipatel27/sales-eda-dashboard.git
-   cd sales-eda-dashboard
-   ```
-2. Install dependencies
-   ```
-   pip install -r requirements.txt
-   ```
-3. Run the dashboard
-   ```
-   streamlit run dashboard.py
-   ```
-4. Access the application
-- Open your browser and go to http://localhost:8501
-
-## Project Structure
-```
-sales-eda-dashboard/
-│
-├── dashboard.py                 # Main Streamlit application
-├── index.ipynb                  # Jupyter notebook for detailed analysis
-├── Dataset_Superstore.csv       # Superstore dataset
-├── requirements.txt             # Python dependencies
-├── README.md                    # Project documentation
-└── screenshots/                 # Sample visualizations
-    ├── overview.png
-    ├── yearly_analysis.png
-    └── correlation_heatmap.png
+```bash
+conda create -n sales-eda python=3.10 -y
+conda activate sales-eda
 ```
 
-## 📊 Dataset Information
+### 3 · Install dependencies
 
-The Superstore dataset contains **9,994 records** with columns such as:
-
-| Column        | Description                                   |
-|---------------|-----------------------------------------------|
-| Order Info    | Row ID, Order ID, Order Date, Ship Date, Ship Mode |
-| Customer Info | Customer ID, Customer Name, Segment          |
-| Location      | Country, City, State, Postal Code, Region    |
-| Product Info  | Product ID, Category, Sub-Category, Product Name |
-| Metrics       | Sales, Quantity, Discount, Profit            |
-
-## 🎛️ Dashboard Screenshots
-
-
-<img width="3839" height="1961" alt="Screenshot 2025-09-06 144657" src="https://github.com/user-attachments/assets/332df41d-9cbe-4785-bf3b-626ee4f24edc" />
-<img width="3714" height="1971" alt="Screenshot 2025-09-06 144824" src="https://github.com/user-attachments/assets/c2537761-389d-474c-bff8-95aecd30a456" />
-<img width="3066" height="1454" alt="Screenshot 2025-09-06 144834" src="https://github.com/user-attachments/assets/c104aa6c-b9ba-43d2-9fb9-55530e1ce3e3" />
-<img width="3062" height="1821" alt="Screenshot 2025-09-06 144855" src="https://github.com/user-attachments/assets/20dbfea7-584f-4e98-845e-654bd41d0e43" />
-<img width="3049" height="1900" alt="Screenshot 2025-09-06 144921" src="https://github.com/user-attachments/assets/2222ef3d-1516-4049-bf6a-16e80a1a1baf" />
-<img width="3088" height="1890" alt="Screenshot 2025-09-06 145002" src="https://github.com/user-attachments/assets/d5a11bd9-a4cc-4cfb-8033-6cdaf9ae539e" />
-<img width="3134" height="1855" alt="Screenshot 2025-09-06 145015" src="https://github.com/user-attachments/assets/8ec50a70-0a15-4187-a1ea-be85ea7bd9b8" />
-<img width="2947" height="1581" alt="Screenshot 2025-09-06 145046" src="https://github.com/user-attachments/assets/49a3d30e-a2bf-48ab-9804-2ee5cb2ea95c" />
-<img width="2385" height="1446" alt="Screenshot 2025-09-06 145111" src="https://github.com/user-attachments/assets/1dbdd7e8-36bb-40e0-955c-a5dba3298742" />
-<img width="2810" height="1442" alt="Screenshot 2025-09-06 145147" src="https://github.com/user-attachments/assets/00dcafe7-6997-4f34-903b-54adbf884159" />
-<img width="2661" height="1503" alt="Screenshot 2025-09-06 145154" src="https://github.com/user-attachments/assets/c70626c4-fbc4-4f9e-96ca-102220329a54" />
-<img width="623" height="1647" alt="Screenshot 2025-09-06 145205" src="https://github.com/user-attachments/assets/f19b468a-bc79-463d-b36e-8e951c6db7d7" />
-
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (git checkout -b feature/NewFeature)
-3. Commit your changes (git commit -m 'Add NewFeature')
-4. Push to the branch (git push origin feature/NewFeature)
-5. Open a Pull Request
-
-## Run the dashboard
-```
-streamlit run app1.py
+```bash
+pip install -r requirements.txt
 ```
 
+### 4 · Run the dashboard
 
+```bash
+streamlit run app.py
+```
 
+Open **http://localhost:8501** in your browser.
 
+---
 
+## 🔥 Enable PySpark (optional)
 
+PySpark requires **Java 11+**. The app works fully without it (pandas fallback).
 
+```bash
+# Install Java via conda
+conda install -c conda-forge openjdk=11 -y
 
+# Uncomment pyspark in requirements.txt, then:
+pip install pyspark==3.5.0
+```
 
+The **PySpark Results** page will show `⚡ Apache Spark (local mode)` when active.
 
+---
 
+## 📓 Run the Notebook
 
+```bash
+cd notebooks
+jupyter notebook 01_sales_eda.ipynb
+```
 
+The notebook covers all 5 analytical layers and saves charts to `outputs/figures/`.
 
+---
 
+## 🗄️ Dataset
 
+| Attribute | Value |
+|-----------|-------|
+| **Source** | Tableau Superstore Sample |
+| **Records** | 9,994 orders |
+| **Columns** | 21 |
+| **Period** | January 2014 – December 2017 |
+| **Geography** | United States · 4 regions · 49 states |
 
+---
+
+## 👩‍💻 Author
+
+<div align="center">
+
+**Khushi Patel**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Khushipatel27-181717?style=flat-square&logo=github)](https://github.com/Khushipatel27)
+
+*Built for Summer 2026 internship applications — Data Analyst · Data Engineer · Data Scientist*
+
+</div>
+
+---
+
+<div align="center">
+<sub>⭐ Star this repo if you found it useful!</sub>
+</div>

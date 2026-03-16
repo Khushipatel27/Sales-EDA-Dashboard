@@ -1,0 +1,33 @@
+# ──────────────────────────────────────────────
+#  Comprehensive Sales EDA Dashboard
+#  Author : Khushi Patel
+#  Python : 3.10+
+# ──────────────────────────────────────────────
+
+# Dashboard
+streamlit==1.32.2
+
+# Data
+pandas==2.2.1
+numpy==1.26.4
+
+# Visualisation
+plotly==5.20.0
+matplotlib==3.8.3
+seaborn==0.13.2
+
+# Machine Learning
+scikit-learn==1.4.2
+
+# Notebook
+notebook==7.1.2
+ipykernel==6.29.3
+
+# Utilities
+openpyxl==3.1.2
+
+# ──────────────────────────────────────────────
+# PySpark (optional — pandas fallback built-in)
+# Requires Java 11+. Uncomment to enable:
+# pyspark==3.5.0
+# ──────────────────────────────────────────────
